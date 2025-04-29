@@ -31,7 +31,6 @@ public class dashboardActivityAdmin extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard_admin);
         button_totalStudent = findViewById(R.id.totalStudents);
         button_totalGroups = findViewById(R.id.totalGroups);
-        button_TotalLevels = findViewById(R.id.totalLevels);
         button_totalTeacher = findViewById(R.id.totalTeachers);
         button_Student = findViewById(R.id.addStudentButton);
         button_addClass = findViewById(R.id.addClassButton);
@@ -42,11 +41,11 @@ public class dashboardActivityAdmin extends AppCompatActivity {
         intentAddT = new Intent(this,AddTeacherActivity.class);
         intentAddSbj = new Intent(this, AddSubject.class);
         intentAddStu = new Intent(this, AddStudentActivity.class);
-                /*
-        intentTotalTeachers = new Intent(this,)
-        intentTotalStu = new Intent(this,)
-        intentTotalGroup = new Intent(this,)
-        intentTotalLevels = new Intent(this,)*/
+
+        intentTotalTeachers = new Intent(this, TotalTeacherListActivity.class);
+        intentTotalStu = new Intent(this,TotalStudentListActivity.class);
+     /*    intentTotalGroup = new Intent(this,)
+    */
         button_Student.setOnClickListener(v -> {
 
             startActivity(intentAddStu);
@@ -66,7 +65,12 @@ public class dashboardActivityAdmin extends AppCompatActivity {
 
             startActivity(intentAddT);
         });
-
+        button_totalTeacher.setOnClickListener(v -> {
+            startActivity(intentTotalTeachers);
+        });
+        button_totalStudent.setOnClickListener(V->{
+            startActivity(intentTotalStu);
+        });
     }
 
 }
