@@ -54,7 +54,7 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHold
            {
                continue;
            }
-            holder.groupName.setText("Groupe and Level: "+gName + " "+ lvl);
+            holder.groupName.setText("Groupe and Level: Groupe: "+gName + " "+ lvl);
         }
         holder.name.setText("Name: " + s.name);
         holder.age.setText("Age: " + s.Age);

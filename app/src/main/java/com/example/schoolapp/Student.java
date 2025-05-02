@@ -9,9 +9,9 @@ public class Student {
     int Age;
 
 
-    public Student(int id, String name, int age) {
+    public Student(int id, String name, int age,GroupClass g) {
         this.id = id;
-
+        group = g;
         this.name = name;
         Age = age;
     }

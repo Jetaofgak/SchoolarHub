@@ -21,7 +21,7 @@ public class ExampleInstrumentedTest {
 
     @Test
     public void launchMyActivityOnly() {
-        ActivityScenario.launch(TotalStudentListActivity.class);
+        ActivityScenario.launch(TotalTeacherListActivity.class);
         // You can now interact with the Activity or assert UI state
     }
 }

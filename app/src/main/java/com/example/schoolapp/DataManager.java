@@ -11,14 +11,15 @@ import java.util.List;
 public class DataManager {
     private static DataManager instance;
     private List<Subject> subjects;
-    private List<Teacher> teachers;
     private List<Student> students;
+    private List<Teacher> teachers;
     private  List<GroupClass> groups;
 
 
     // Private constructor to prevent instantiation
     private DataManager() {
         subjects = new ArrayList<>();
+        students = new ArrayList<>();
         Subject mathSubject = new Subject("Mathematics");
         Subject scienceSubject = new Subject("Physics");
 
@@ -72,75 +73,59 @@ public class DataManager {
         populateStudents();
     }
     private void populateStudents() {
-        students = new ArrayList<>();
+
         groups = new ArrayList<>();
+
         // Create the groups
-        GroupClass g1 = new GroupClass("Group A", 1);
-        GroupClass g2 = new GroupClass("Group B", 2);
-        GroupClass g3 = new GroupClass("Group C", 2);
-        GroupClass g4 = new GroupClass("Group D", 3);
-        GroupClass g5 = new GroupClass("Group E", 4);
+        GroupClass g1 = new GroupClass("A", 1);
+        GroupClass g2 = new GroupClass("B", 2);
+        GroupClass g3 = new GroupClass("C", 2);
+        GroupClass g4 = new GroupClass("D", 3);
+        GroupClass g5 = new GroupClass("E", 4);
 
+        // Create Teachers and assign them to groups
+        Student s1 = new Student(1, "Ali", 15, g1);
+        Student s2 = new Student(2, "Zara", 16, g1);
+        Student s3 = new Student(3, "Mounir", 17, g2);
+        Student s4 = new Student(4, "Leila", 14, g2);
+        Student s5 = new Student(5, "Sami", 15, g3);
+        Student s6 = new Student(6, "Layla", 16, g3);
+        Student s7 = new Student(7, "Nada", 17, g3);
+        Student s8 = new Student(8, "Rania", 16, g3);
+        Student s9 = new Student(9, "Dina", 14, g3);
+        Student s10 = new Student(10, "Hassan", 17, g4);
+        Student s11 = new Student(11, "Walid", 15, g4);
+        Student s12 = new Student(12, "Fatima", 16, g4);
+        Student s13 = new Student(13, "Tariq", 15, g4);
+        Student s14 = new Student(14, "Salma", 15, g4);
+        Student s15 = new Student(15, "Fouad", 14, g5);
+        Student s16 = new Student(16, "Khalid", 14, g5);
+        Student s17 = new Student(17, "Maya", 17, g5);
+        Student s18 = new Student(18, "Imane", 17, g5);
+        Student s19 = new Student(19, "Ibrahim", 17, g5);
+        Student s20 = new Student(20, "Nora", 14, g1);
+        Student s21 = new Student(21, "Amina", 17, g1);
+        Student s22 = new Student(22, "Rami", 14, g2);
+        Student s23 = new Student(23, "Omar", 14, g2);
+        Student s24 = new Student(24, "Youssef", 17, g2);
 
-        // Create students and assign them to groups
-        Student s1 = new Student(1,  "Ali", 15);
-        Student s2 = new Student(2,  "Zara", 16);
-        Student s3 = new Student(3,  "Mounir", 17);
-        Student s4 = new Student(4,  "Leila", 14);
-        Student s5 = new Student(5, "Sami", 15);
-        Student s6 = new Student(6, "Layla", 16);
-        Student s7 = new Student(7, "Nada", 17);
-        Student s8 = new Student(8, "Rania", 16);
-        Student s9 = new Student(9, "Dina", 14);
-
-        Student s10 = new Student(10, "Hassan", 17);
-        Student s11 = new Student(11, "Walid", 15);
-        Student s12 = new Student(12, "Fatima", 16);
-        Student s13 = new Student(13, "Tariq", 15);
-        Student s14 = new Student(14, "Salma", 15);
-
-        Student s15 = new Student(15, "Fouad", 14);
-        Student s16 = new Student(16, "Khalid", 14);
-        Student s17 = new Student(17, "Maya", 17);
-        Student s18 = new Student(18, "Imane", 17);
-        Student s19 = new Student(19, "Ibrahim", 17);
-
-        Student s20 = new Student(20, "Nora", 14);
-        Student s21 = new Student(21, "Amina", 17);
-        Student s22 = new Student(22, "Rami", 14);
-        Student s23 = new Student(23, "Omar", 14);
-        Student s24 = new Student(24, "Youssef", 17);
-
-
-        // Add students to their respective group lists
-        g1.students.add(s1);
-        g1.students.add(s2);
-        g2.students.add(s3);
-        g2.students.add(s4);
+        // Add students to their group lists
+        g1.students.addAll(List.of(s1, s2, s20, s21));
+        g2.students.addAll(List.of(s3, s4, s22, s23, s24));
         g3.students.addAll(List.of(s5, s6, s7, s8, s9));
         g4.students.addAll(List.of(s10, s11, s12, s13, s14));
         g5.students.addAll(List.of(s15, s16, s17, s18, s19));
-        g1.students.addAll(List.of(s20, s21));
-        g2.students.addAll(List.of(s22, s23, s24));
 
-
-        // Add students to global student list (if needed)
-        students.add(s1);
-        students.add(s2);
-        students.add(s3);
-        students.add(s4);
+        // Add students to global student list
         students.addAll(List.of(
-                s5, s6, s7, s8, s9,
-                s10, s11, s12, s13, s14,
-                s15, s16, s17, s18, s19,
-                s20, s21, s22, s23, s24
+                s1, s2, s3, s4, s5, s6, s7, s8, s9,
+                s10, s11, s12, s13, s14, s15, s16, s17,
+                s18, s19, s20, s21, s22, s23, s24
         ));
-        groups.add(g1);
-        groups.add(g2);
-        groups.addAll(List.of(g3, g4, g5));
 
-
+        groups.addAll(List.of(g1, g2, g3, g4, g5));
     }
+
 
 
     public static DataManager getInstance() {

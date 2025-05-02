@@ -31,9 +31,9 @@ public class GroupClass {
 
     public Pair<String,Integer> getRightGroupForStudent(Student student)
     {
-        for(Student studentChecker: students)
+        for(Student StudentChecker: students)
         {
-            if(studentChecker == student)
+            if(StudentChecker == student)
             {
                 return new Pair<>(getName(),getLvl());
             }

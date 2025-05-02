@@ -15,7 +15,7 @@
             android:name=".TotalClassListActivity"
             android:exported="false" />
         <activity
-            android:name=".TotalStudentListActivity"
+            android:name=".TotalTeacherListActivity"
             android:exported="false" />
         <activity
             android:name=".TotalTeacherListActivity"
@@ -38,7 +38,7 @@
             android:name=".AddClassActivity"
             android:exported="false" />
         <activity
-            android:name=".AddStudentActivity"
+            android:name=".AddTeacherActivity"
             android:exported="false" />
         <activity
             android:name=".AddTeacherActivity"
