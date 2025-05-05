@@ -14,8 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class LoginActivity extends AppCompatActivity {
     EditText passwordField;
     Button loginButton;
-    Intent intent;
-    Intent intent2;
+    Intent intent,intent2,intent3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,8 @@ public class LoginActivity extends AppCompatActivity {
         passwordField = findViewById(R.id.passwordField);
         loginButton = findViewById(R.id.loginButton);
         intent = new Intent(this, SignUpActivity.class);
-        intent2 = new Intent(this,dashboardActivityAdmin.class);
+        intent2 = new Intent(this, DashboardActivityMain.class);
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,6 +38,10 @@ public class LoginActivity extends AppCompatActivity {
                 } else if(password.equals("admin")) {
 
                     startActivity(intent2);
+                }
+                else if(password.equals("student"))
+                {
+
                 }
             }
         });

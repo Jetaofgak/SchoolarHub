@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome, Principal"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Add Buttons Row -->
+
+    <!-- Summary Title -->
+
+    <!-- Summary Cards -->
+
+    <Button
+        android:id="@+id/addTeacherButton"
+        android:layout_width="140dp"
+        android:layout_height="120dp"
+
+
+        android:layout_marginTop="44dp"
+        android:text="+\nAdd\nTeacher"
+        android:textAlignment="center"
+        android:textColor="#1988cf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.23" />
+
+    <Button
+        android:id="@+id/addClassButton"
+        android:layout_width="140dp"
+        android:layout_height="120dp"
+
+        android:layout_marginTop="24dp"
+        android:text="+\nAdd\nClass"
+        android:textAlignment="center"
+        android:textColor="#1988cf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addTeacherButton"
+        app:layout_constraintWidth_percent="0.23" />
+
+    <Button
+        android:id="@+id/addSubjectButton"
+        android:layout_width="140dp"
+        android:layout_height="120dp"
+
+        android:layout_marginTop="44dp"
+        android:text="+\nAdd\nSubject"
+        android:textAlignment="center"
+        android:textColor="#1988cf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.769"
+        app:layout_constraintStart_toEndOf="@+id/addTeacherButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.23" />
+
+    <Button
+        android:id="@+id/addStudentButton"
+        android:layout_width="140dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:text="+\nAdd\nStudent"
+        android:textAlignment="center"
+        android:textColor="#1988cf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/addClassButton"
+        app:layout_constraintTop_toBottomOf="@+id/addSubjectButton"
+        app:layout_constraintWidth_percent="0.23">
+
+    </Button>
+
+    <!-- Bottom Navigation -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

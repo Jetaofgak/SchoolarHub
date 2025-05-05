@@ -16,7 +16,7 @@ public class AddClassActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_add_class);
-        intentReturn = new Intent(this,dashboardActivityAdmin.class);
+        intentReturn = new Intent(this,DashboardActivityMain.class);
         buttonReturn = findViewById(R.id.buttonReturn);
         buttonReturn.setOnClickListener(new View.OnClickListener() {
             @Override
