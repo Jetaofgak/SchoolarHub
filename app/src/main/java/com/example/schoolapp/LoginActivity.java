@@ -26,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
         loginButton = findViewById(R.id.loginButton);
         intent = new Intent(this, SignUpActivity.class);
         intent2 = new Intent(this, DashboardActivityMain.class);
+        intent3 = new Intent(this, DashboardActivityStudentMain.class);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,9 +40,9 @@ public class LoginActivity extends AppCompatActivity {
 
                     startActivity(intent2);
                 }
-                else if(password.equals("student"))
+                else if(password.equals("stud"))
                 {
-
+                    startActivity(intent3);
                 }
             }
         });

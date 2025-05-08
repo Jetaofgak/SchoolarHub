@@ -16,76 +16,125 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#000000"
-
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <!-- Add Buttons Row -->
-
-    <!-- Summary Title -->
-
-    <!-- Summary Cards -->
-
-    <Button
-        android:id="@+id/addTeacherButton"
-        android:layout_width="140dp"
-        android:layout_height="120dp"
-
-
-        android:layout_marginTop="44dp"
-        android:text="+\nAdd\nTeacher"
-        android:textAlignment="center"
-        android:textColor="#1988cf"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.23" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/addClassButton"
-        android:layout_width="140dp"
-        android:layout_height="120dp"
-
-        android:layout_marginTop="24dp"
-        android:text="+\nAdd\nClass"
-        android:textAlignment="center"
-        android:textColor="#1988cf"
+    <!-- Top Buttons Row -->
+    <LinearLayout
+        android:id="@+id/topButtonsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addTeacherButton"
-        app:layout_constraintWidth_percent="0.23" />
+        app:layout_constraintTop_toBottomOf="@id/welcomeText">
 
-    <Button
-        android:id="@+id/addSubjectButton"
-        android:layout_width="140dp"
-        android:layout_height="120dp"
+        <Button
+            android:id="@+id/addTeacherButton"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text="+\nAdd\nTeacher"
+            android:textAlignment="center"
+            android:textColor="#1988cf" />
 
-        android:layout_marginTop="44dp"
-        android:text="+\nAdd\nSubject"
-        android:textAlignment="center"
-        android:textColor="#1988cf"
+        <Button
+            android:id="@+id/addClassButton"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text="+\nAdd\nClass"
+            android:textAlignment="center"
+            android:textColor="#1988cf" />
+    </LinearLayout>
+
+    <!-- Bottom Buttons Row -->
+    <LinearLayout
+        android:id="@+id/bottomButtonsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.769"
-        app:layout_constraintStart_toEndOf="@+id/addTeacherButton"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.23" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topButtonsContainer">
 
-    <Button
-        android:id="@+id/addStudentButton"
-        android:layout_width="140dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
-        android:text="+\nAdd\nStudent"
-        android:textAlignment="center"
-        android:textColor="#1988cf"
+        <Button
+            android:id="@+id/addSubjectButton"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text="+\nAdd\nSubject"
+            android:textAlignment="center"
+            android:textColor="#1988cf" />
+
+        <Button
+            android:id="@+id/addStudentButton"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text="+\nAdd\nStudent"
+            android:textAlignment="center"
+            android:textColor="#1988cf" />
+    </LinearLayout>
+
+    <!-- Number of Elements -->
+    <LinearLayout
+        android:id="@+id/numberOfElementsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toEndOf="@+id/addClassButton"
-        app:layout_constraintTop_toBottomOf="@+id/addSubjectButton"
-        app:layout_constraintWidth_percent="0.23">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottomButtonsContainer">
 
-    </Button>
+        <TextView
+            android:id="@+id/numberOfTeachers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/outlined_box"
+            android:fontFamily="@font/jockeyfont"
+            android:text="Number of Teachers: 0"
+            android:textSize="16sp"
+            android:padding="24dp"
+            android:gravity="center" />
 
-    <!-- Bottom Navigation -->
+        <TextView
+            android:id="@+id/numberOfStudents"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/outlined_box"
+            android:fontFamily="@font/jockeyfont"
+            android:text="Number of Students: 0"
+            android:textSize="16sp"
+            android:padding="24dp"
+            android:gravity="center" />
+    </LinearLayout>
 
+    <TextView
+        android:id="@+id/numberOfGroups"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/outlined_box"
+        android:fontFamily="@font/jockeyfont"
+        android:text="Number of Groups: 0"
+        android:textSize="16sp"
+        android:padding="24dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numberOfElementsContainer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

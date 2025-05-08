@@ -10,4 +10,11 @@ public class Grade {
         note =n;
         description = desc;
     }
+    public int getScore() {
+        return note;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 }

@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -49,7 +50,19 @@ public class DashboardFragment extends Fragment {
             Intent intent = new Intent(getActivity(), AddSubject.class);
             startActivity(intent);
         });
+        TextView numberOfTeachers = view.findViewById(R.id.numberOfTeachers);
+        TextView numberOfStudents = view.findViewById(R.id.numberOfStudents);
+        TextView numberOfGroups = view.findViewById(R.id.numberOfGroups);
 
+        DataManager dataManager = DataManager.getInstance();
+
+        int teacherCount = dataManager.getTeachers().size();
+        int studentCount = dataManager.getStudents().size();
+        int groupCount = dataManager.getGroups().size();
+
+        numberOfTeachers.setText("Number of Teachers: " + teacherCount);
+        numberOfStudents.setText("Number of Students: " + studentCount);
+        numberOfGroups.setText("Number of Groups: " + groupCount);
         return view;
     }
 }
