@@ -11,7 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SchoolApp"
         tools:targetApi="31">
-        <activity android:name=".DashboardActivityMain"/>
+        <activity
+            android:name=".teacherPart.assignement_returned"
+            android:exported="false" />
+        <activity
+            android:name=".teacherPart.SubjectGroupActivity"
+            android:exported="false" />
+        <activity android:name=".adminPart.DashboardActivityMain" />
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -24,18 +30,23 @@
             </intent-filter>
         </activity> <!-- Other Activities -->
         <activity
-            android:name=".AddSubject"
+            android:name=".adminPart.AddSubject"
             android:exported="false" />
         <activity
-            android:name=".AddClassActivity"
+            android:name=".adminPart.AddClassActivity"
             android:exported="false" />
         <activity
-            android:name=".AddTeacherActivity"
+            android:name=".adminPart.AddTeacherActivity"
             android:exported="false" />
-        <activity android:name=".AddStudentActivity"
+        <activity
+            android:name=".adminPart.AddStudentActivity"
             android:exported="false" />
-        <activity android:name=".DashboardActivityStudentMain"
-            android:exported="false"/>
+        <activity
+            android:name=".studentPart.DashboardActivityStudentMain"
+            android:exported="false" />
+        <activity
+            android:name=".teacherPart.DashboardActivityTeacherMain"
+            android:exported="false" />
         <activity
             android:name=".LoginActivity"
             android:exported="false"

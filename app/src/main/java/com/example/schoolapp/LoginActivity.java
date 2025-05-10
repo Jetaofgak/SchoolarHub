@@ -5,16 +5,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.schoolapp.adminPart.DashboardActivityMain;
+import com.example.schoolapp.studentPart.DashboardActivityStudentMain;
+import com.example.schoolapp.teacherPart.DashboardActivityTeacherMain;
+
 public class LoginActivity extends AppCompatActivity {
     EditText passwordField;
     Button loginButton;
-    Intent intent,intent2,intent3;
+    Intent intent,intent2,intent3,intent4;
 
 
     @Override
@@ -27,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
         intent = new Intent(this, SignUpActivity.class);
         intent2 = new Intent(this, DashboardActivityMain.class);
         intent3 = new Intent(this, DashboardActivityStudentMain.class);
-
+        intent4 = new Intent(this, DashboardActivityTeacherMain.class);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +46,13 @@ public class LoginActivity extends AppCompatActivity {
                 else if(password.equals("stud"))
                 {
                     startActivity(intent3);
+                }
+                else if(password.equals("teach"))
+                {
+                    startActivity(intent4);
+                }
+                else {
+                    Toast.makeText(LoginActivity.this, "Invalid password", Toast.LENGTH_SHORT).show();
                 }
             }
         });

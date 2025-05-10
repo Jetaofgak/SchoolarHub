@@ -31,16 +31,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:padding="8dp" />
+            android:padding="18dp" />
 
-        <Button
-            android:id="@+id/searchButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Search"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:textColor="#1988cf" />
+
     </LinearLayout>
 
     <!-- RecyclerView for List -->
